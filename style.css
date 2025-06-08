@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +7,16 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f5f9fc;
-  color: #111;
+  background: #f8f9fa;
+  color: #222;
 }
 
-.header {
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background: #003B46;
   color: white;
 }
@@ -25,152 +27,137 @@ body {
 }
 
 .hamburger {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   cursor: pointer;
   display: none;
 }
 
-.nav {
+nav {
   display: flex;
   gap: 1rem;
 }
 
-.nav a {
+nav a {
   color: white;
   text-decoration: none;
 }
 
+#menu.active {
+  display: block;
+}
+
+/* Hero Section */
 .hero {
   position: relative;
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(to bottom, #07575B, #C4DFE6);
+  background: #07575B;
   color: white;
-}
-
-.hero-content h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.explore-btn {
-  background: white;
-  color: #003B46;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .galaxy-bg {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, #003B46 10%, transparent 70%);
-  opacity: 0.1;
-  z-index: 0;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, #66A5AD 0%, #003B46 80%);
+  z-index: -1;
+  animation: spin 60s linear infinite;
 }
 
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.explore-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #66A5AD;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Services */
 .services {
   padding: 2rem;
-  background: #fff;
+  text-align: center;
 }
 
 .service-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
 
 .box {
-  background: #66A5AD;
-  color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 600;
+  background: #C4DFE6;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  min-width: 150px;
 }
 
+/* Feedback */
 .feedback {
   padding: 2rem;
-  background: #C4DFE6;
+  background: #f0f0f0;
 }
 
 .feedbacks {
-  display: flex;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.msg {
+.feedback-item {
   background: white;
   padding: 1rem;
   border-radius: 10px;
-  min-width: 220px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
+/* Footer */
 footer {
+  padding: 2rem;
   background: #003B46;
   color: white;
-  padding: 1.5rem;
   text-align: center;
 }
 
-footer .note {
-  font-style: italic;
+.ceo-note {
   margin-bottom: 1rem;
 }
 
-.whatsapp {
+.whatsapp-icon {
+  font-size: 1.5rem;
+  color: white;
   display: inline-block;
   margin-top: 1rem;
-  color: #25D366;
-  font-weight: bold;
-  text-decoration: none;
 }
 
-.explore ul {
-  list-style: none;
-  padding: 2rem;
-}
-
-.explore ul li {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* Mobile */
+@media(max-width: 768px) {
   .hamburger {
     display: block;
   }
 
-  .nav {
-    flex-direction: column;
+  nav {
     display: none;
-    background: #003B46;
+    flex-direction: column;
+    background: #07575B;
+    padding: 1rem;
     position: absolute;
+    right: 1rem;
     top: 60px;
-    left: 0;
-    width: 100%;
+    z-index: 999;
+    border-radius: 10px;
   }
 
-  .nav.active {
-    display: flex;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content h2 {
-    font-size: 1.1rem;
+  .hero-content {
+    margin-top: 2rem;
   }
 }
