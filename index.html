@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanayaa - Modeling Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nexon Quantum</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="logo">NQ</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="nav" id="navMenu">
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+      <a href="explore.html">Explore</a>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h1>Welcome to Shanayaa's Portfolio</h1>
-        <p>Exploring the world of fashion, elegance, and creativity.</p>
-
-        <h2 id="about">About Me</h2>
-        <p>I am Shanayaa, a passionate model, dedicated to bringing fashion and style to life.</p>
-
-        <!-- Instagram Link -->
-        <h2>Follow Me</h2>
-        <p>Check out my latest work on Instagram:</p>
-        <a href="https://www.instagram.com/sanshri74" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="40px" alt="Instagram Logo">
-            @sanshri74
-        </a>
-
-        <!-- Gallery Section (For Future) -->
-        <h2 id="gallery">Gallery</h2>
-        <p>More photos coming soon...</p>
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Nexon Quantum</h1>
+      <h2 id="typingText"></h2>
+      <a href="explore.html" class="explore-btn">Explore Now</a>
     </div>
+    <div class="galaxy-bg"></div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Shanayaa. All Rights Reserved.</p>
-    </footer>
+  <section class="services" id="services">
+    <h3>Our Expertise</h3>
+    <div class="service-boxes">
+      <div class="box">Web Development</div>
+      <div class="box">App Development</div>
+      <div class="box">AI Solutions</div>
+      <div class="box">Game Dev</div>
+    </div>
+  </section>
+
+  <section class="feedback" id="feedback">
+    <h3>Client Feedback</h3>
+    <div class="feedbacks">
+      <div class="msg">"Brilliant work!" — Dhruv ⭐⭐⭐⭐⭐</div>
+      <div class="msg">"Super fast delivery." — Aryan ⭐⭐⭐⭐</div>
+      <div class="msg">"Loved the creativity." — Himanshu ⭐⭐⭐⭐⭐</div>
+      <div class="msg">"Great service." — Anushka ⭐⭐⭐⭐</div>
+      <div class="msg">"Reliable and clean." — Ahmad ⭐⭐⭐⭐</div>
+      <div class="msg">"Highly recommend!" — Farooq ⭐⭐⭐⭐⭐</div>
+      <div class="msg">"True genius." — Athrv ⭐⭐⭐⭐⭐</div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="note">
+      <p>CEO Note: Building India’s smartest tech future 🚀</p>
+    </div>
+    <div class="contact">
+      <p>📞 +91-8779989576</p>
+      <p>📧 connect@nexonquantum.in</p>
+      <a href="https://wa.me/918779989576" class="whatsapp">💬 WhatsApp</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
