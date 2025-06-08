@@ -2,66 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nexon Quantum</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="header">
+
+  <!-- Navbar -->
+  <header class="navbar">
     <div class="logo">NQ</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <nav class="nav" id="navMenu">
-      <a href="#hero">Home</a>
-      <a href="#services">Services</a>
-      <a href="#feedback">Feedback</a>
-      <a href="#contact">Contact</a>
-      <a href="explore.html">Explore</a>
+    <nav id="menu">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">Why Us</a>
+      <a href="https://wa.me/918779989576">Connect</a>
     </nav>
   </header>
 
-  <section class="hero" id="hero">
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="hero-content">
       <h1>Nexon Quantum</h1>
-      <h2 id="typingText"></h2>
+      <p><span id="typing-text"></span></p>
       <a href="explore.html" class="explore-btn">Explore Now</a>
     </div>
     <div class="galaxy-bg"></div>
   </section>
 
-  <section class="services" id="services">
-    <h3>Our Expertise</h3>
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Expertise</h2>
     <div class="service-boxes">
       <div class="box">Web Development</div>
       <div class="box">App Development</div>
-      <div class="box">AI Solutions</div>
-      <div class="box">Game Dev</div>
+      <div class="box">AI Projects</div>
+      <div class="box">Game Development</div>
     </div>
   </section>
 
-  <section class="feedback" id="feedback">
-    <h3>Client Feedback</h3>
+  <!-- Clients & Feedback -->
+  <section class="feedback">
+    <h2>Client Feedback</h2>
     <div class="feedbacks">
-      <div class="msg">"Brilliant work!" — Dhruv ⭐⭐⭐⭐⭐</div>
-      <div class="msg">"Super fast delivery." — Aryan ⭐⭐⭐⭐</div>
-      <div class="msg">"Loved the creativity." — Himanshu ⭐⭐⭐⭐⭐</div>
-      <div class="msg">"Great service." — Anushka ⭐⭐⭐⭐</div>
-      <div class="msg">"Reliable and clean." — Ahmad ⭐⭐⭐⭐</div>
-      <div class="msg">"Highly recommend!" — Farooq ⭐⭐⭐⭐⭐</div>
-      <div class="msg">"True genius." — Athrv ⭐⭐⭐⭐⭐</div>
+      <div class="feedback-item">"Great experience!" - Dhruv ⭐⭐⭐⭐⭐</div>
+      <div class="feedback-item">"Impressive results." - Aryan ⭐⭐⭐⭐</div>
+      <div class="feedback-item">"Professional team." - Himanshu ⭐⭐⭐⭐⭐</div>
+      <div class="feedback-item">"Loved the UI/UX!" - Anushka ⭐⭐⭐⭐</div>
+      <div class="feedback-item">"Reliable & efficient." - Ahmad ⭐⭐⭐⭐⭐</div>
+      <div class="feedback-item">"Top-notch service." - Farooq ⭐⭐⭐⭐</div>
+      <div class="feedback-item">"Creative minds!" - Athrv ⭐⭐⭐⭐⭐</div>
     </div>
   </section>
 
-  <footer id="contact">
-    <div class="note">
-      <p>CEO Note: Building India’s smartest tech future 🚀</p>
+  <!-- Footer -->
+  <footer>
+    <div class="ceo-note">
+      <h4>Note from CEO:</h4>
+      <p>At Nexon Quantum, innovation drives everything we do.</p>
     </div>
-    <div class="contact">
-      <p>📞 +91-8779989576</p>
-      <p>📧 connect@nexonquantum.in</p>
-      <a href="https://wa.me/918779989576" class="whatsapp">💬 WhatsApp</a>
+    <div class="contact-info">
+      <p>Contact: +91 8779989576</p>
+      <a href="https://wa.me/918779989576" class="whatsapp-icon">📞</a>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
