@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexon Quantum</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexon Quantum - Innovating Digital Experiences</title>
+    <!-- Tailwind CSS CDN for modern and responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a sleek, professional look */
+        body {
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden; /* Prevents horizontal scroll issues, especially with animations */
+        }
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">NQ</div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <nav id="menu">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Blog</a>
-      <a href="#">Why Us</a>
-      <a href="https://wa.me/918779989576">Connect</a>
-    </nav>
-  </header>
+        /* Custom gradient for the hero section background */
+        .hero-gradient-bg {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); /* Dark, futuristic gradient */
+            position: relative; /* Needed for pseudo-element positioning */
+            overflow: hidden; /* Hides overflow from the background animation */
+        }
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Nexon Quantum</h1>
-      <p><span id="typing-text"></span></p>
-      <a href="explore.html" class="explore-btn">Explore Now</a>
-    </div>
-    <div class="galaxy-bg"></div>
-  </section>
+        /* Subtle background animation for the hero section to add dynamism */
+        .hero-gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            /* Radial gradient for a glowing/pulsing effect */
+            background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
+            animation: pulse-bg 15s infinite alternate ease-in-out; /* Animation definition */
+            z-index: 0; /* Ensures it stays behind content */
+        }
 
-  <!-- Services -->
-  <section class="services">
-    <h2>Our Expertise</h2>
-    <div class="service-boxes">
-      <div class="box">Web Development</div>
-      <div class="box">App Development</div>
-      <div class="box">AI Projects</div>
-      <div class="box">Game Development</div>
-    </div>
-  </section>
+        /* Keyframes for the hero background pulse animation */
+        @keyframes pulse-bg {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
 
-  <!-- Clients & Feedback -->
-  <section class="feedback">
-    <h2>Client Feedback</h2>
-    <div class="feedbacks">
-      <div class="feedback-item">"Great experience!" - Dhruv ⭐⭐⭐⭐⭐</div>
-      <div class="feedback-item">"Impressive results." - Aryan ⭐⭐⭐⭐</div>
-      <div class="feedback-item">"Professional team." - Himanshu ⭐⭐⭐⭐⭐</div>
-      <div class="feedback-item">"Loved the UI/UX!" - Anushka ⭐⭐⭐⭐</div>
-      <div class="feedback-item">"Reliable & efficient." - Ahmad ⭐⭐⭐⭐⭐</div>
-      <div class="feedback-item">"Top-notch service." - Farooq ⭐⭐⭐⭐</div>
-      <div class="feedback-item">"Creative minds!" - Athrv ⭐⭐⭐⭐⭐</div>
-    </div>
-  </section>
+        /* Text animation for elements within the hero section */
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards; /* Apply fadeInUp animation */
+            opacity: 0; /* Start elements hidden */
+        }
 
-  <!-- Footer -->
-  <footer>
-    <div class="ceo-note">
-      <h4>Note from CEO:</h4>
-      <p>At Nexon Quantum, innovation drives everything we do.</p>
-    </div>
-    <div class="contact-info">
-      <p>Contact: +91 8779989576</p>
-      <a href="https://wa.me/918779989576" class="whatsapp-icon">📞</a>
-    </div>
-  </footer>
+        /* Delays for sequential animation of hero text elements */
+        .animate-fade-in-up.delay-1 { animation-delay: 0.3s; }
+        .animate-fade-in-up.delay-2 { animation-delay: 0.6s; }
+        .animate-fade-in-up.delay-3 { animation-delay: 0.9s; }
 
-</body>
-</html>
+        /* Keyframes for the fade-in-up text animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Start slightly below final position */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* End at final position */
+            }
+        }
+
+        /* Primary button styling with gradient and hover effects */
+        .btn-primary {
+            background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%); /* Indigo to purple gradient */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 100%); /* Reverse gradient on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        /* Service card styling with hover effects */
+        .service-card {
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            border: 1px solid transparent; /* Transparent border for hover effect */
+        }
+        .service-card:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+            border-color: #6366f1; /* Indigo border on hover */
+        }
+
+        /* Mobile menu specific styles for slide-in/out effect */
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out; /* Smooth slide transition */
+            transform: translateX(100%); /* Start of
